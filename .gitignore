@@ -3,6 +3,11 @@ cv.typ
 status.txt
 
 # -----------------------------------------------
+# Photo personnelle
+# -----------------------------------------------
+assets/images/leparoux-aristide_1.jpg
+
+# -----------------------------------------------
 # Dashboards NON floutés (données sensibles)
 # -----------------------------------------------
 assets/images/Stage/dashboard-global.jpg
