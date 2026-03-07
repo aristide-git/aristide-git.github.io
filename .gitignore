@@ -1,1 +1,33 @@
+# Fichiers de travail locaux
 cv.typ
+status.txt
+
+# -----------------------------------------------
+# Dashboards NON floutés (données sensibles)
+# -----------------------------------------------
+assets/images/Stage/dashboard-global.jpg
+assets/images/Stage/dashboard-annuel.jpg
+assets/images/Stage/dashboard-selection.jpg
+assets/images/Stage/dashboard-mensuel.jpg
+assets/images/Stage/dashboard-trimestriel.jpg
+assets/images/Stage/dashboard-comparaison-notations.png
+
+# -----------------------------------------------
+# Images non utilisées par le site (brouillons, exports divers)
+# -----------------------------------------------
+assets/images/Stage/DashBoard_organisation.drawio.png
+assets/images/Stage/Activity_diagram.drawio.png
+assets/images/Stage/Docker_network.drawio.png
+assets/images/Stage/Design sans titre.png
+assets/images/Stage/Design sans titre2.png
+assets/images/Stage/Design sans titre3.png
+assets/images/Stage/formulaire-evaluation.png
+assets/images/Stage/questionnaire-detail.jpg
+assets/images/Stage/repartition-demandes.jpg
+
+# -----------------------------------------------
+# Fichiers sources drawio (pas les .png exportés)
+# -----------------------------------------------
+assets/images/Stage/schéma/Activity_diagram.drawio
+assets/images/Stage/schéma/Docker_network
+assets/images/Stage/schéma/Use_case_data_analyse_gestsup.drawio
