@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet — OthelAI</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <a class="nav-tab active" href="../index.html#projects">← Retour</a>
+            </div>
+        </nav>
+        <main class="section-content" style="margin-top:24px">
+            <!-- Hero avec logo -->
+            <div class="project-hero">
+                <img src="../assets/images/othelai/logo.jpeg" alt="Logo OthelAI" class="project-logo">
+                <div>
+                    <h1>OthelAI — Jeu Othello avec IA</h1>
+                    <p>Développement d'un jeu Othello multijoueur en ligne avec backend Flask et intelligence
+                        artificielle implémentée en C pour l'adversaire.</p>
+                </div>
+            </div>
+
+            <!-- Affichage du poster PDF -->
+            <div class="pdf-viewer">
+                <h3>📄 Poster du projet</h3>
+                <embed src="../assets/images/othelai/othellai.pdf" type="application/pdf"
+                    style="border: 1px solid var(--border-color); border-radius: 8px;" />
+                <p style="margin-top: 1rem; text-align: center;">
+                    <a href="../assets/images/othelai/othellai.pdf" target="_blank"
+                        style="color: var(--primary-color);">
+                        Ouvrir le poster en pleine page →
+                    </a>
+                </p>
+            </div>
+
+            <h3>Technologies</h3>
+            <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">WebSockets</span>
+            </div>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+                <li>Interface de jeu interactive en JavaScript</li>
+                <li>Multijoueur en temps réel avec WebSockets</li>
+                <li>IA avancée développée en C pour l'adversaire</li>
+                <li>Backend Flask pour la gestion des parties</li>
+            </ul>
+
+            <h3>Défis techniques</h3>
+            <ul>
+                <li>Implémentation de l'algorithme minimax pour l'IA</li>
+                <li>Gestion des communications temps réel</li>
+                <li>Intégration C/Python pour optimiser les performances</li>
+            </ul>
+
+            <h3>💡 Retours d'expérience & Compétences acquises</h3>
+            <div class="about-text">
+                <p>
+                    <strong>Travail d'équipe & Protocoles :</strong> Ce projet m'a appris à collaborer avec un groupe
+                    aléatoire et à
+                    définir un <strong>protocole de communication strict</strong>. Chaque groupe développait sa propre
+                    IA, mais toutes devaient
+                    pouvoir s'affronter : le respect des spécifications d'interface était donc critique (plus que le
+                    code lui-même).
+                </p>
+                <p>
+                    <strong>Python vs C :</strong> J'ai touché du doigt le compromis performance/simplicité.
+                    Python gérait la logique de jeu et le serveur (simplicité), tandis que le moteur d'IA a été écrit en
+                    C
+                    pour maximiser la <strong>profondeur de recherche</strong> de l'algorithme Minimax dans le temps
+                    imparti.
+                </p>
+                <p>
+                    <strong>Réalité du terrain :</strong> Le passage d'un environnement local (rapide, stable) à un
+                    déploiement réel
+                    a révélé des problèmes inattendus (latence réseau, timeouts) qu'il a fallu gérer pour éviter les
+                    crashs en plein match.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

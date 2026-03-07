@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="27.2.0">
+  <diagram name="Page-1" id="8VqG_cJ7_ZoXHyhFlQy_">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1400" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-1" value="Docker_Network" style="whiteSpace=wrap;strokeWidth=2;fontColor=#333333;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="625" y="190" width="1667" height="405" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-2" value="PostgreSQL" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1038" y="483" width="94" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-3" value="pgAdmin" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="701" y="341" width="122" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-4" value="Superset" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="920" y="341" width="122" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-5" value="Airflow Init" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1607" y="341" width="140" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-6" value="Airflow Webserver" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="215" width="191" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-7" value="Airflow Scheduler" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="215" width="187" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-8" value="Volume postgres_data" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="939" y="677" width="172" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-9" value="Volume pgadmin_data" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="716" y="677" width="174" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-10" value="Volume airflow_data" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="2044" y="677" width="163" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-11" value="**pgAdmin** : Interface web pour administrer PostgreSQL" style="whiteSpace=wrap;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="260" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-12" value="**PostgreSQL** : Base de données centrale pour tous les services" style="whiteSpace=wrap;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="667.5" width="260" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-13" value="**Superset** : Visualisation et BI sur les données PostgreSQL" style="whiteSpace=wrap;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="730" y="10" width="260" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-14" value="**Airflow** : Orchestration de workflows (DAGs), stocke son état dans PostgreSQL" style="whiteSpace=wrap;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="-40" width="260" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-15" value="**Volumes** : Permettent de persister les données même si les containers sont supprimés" style="whiteSpace=wrap;strokeWidth=2;fontStyle=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="843" y="819" width="260" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-16" value="Administre la base" style="curved=1;startArrow=none;endArrow=block;entryX=-0.01;entryY=0.35;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-3" target="9RnS6XpiojF8uRyiZI6o-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="420" />
+              <mxPoint x="860" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-17" value="Lit les données pour BI" style="curved=1;startArrow=none;endArrow=block;exitX=0.32;exitY=1.01;entryX=-0.01;entryY=0.13;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-4" target="9RnS6XpiojF8uRyiZI6o-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-18" value="Initialise la base Airflow" style="curved=1;startArrow=none;endArrow=block;exitX=0.04;exitY=1.01;entryX=1;entryY=0.37;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-5" target="9RnS6XpiojF8uRyiZI6o-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1527" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-19" value="Lit/écrit DAGs, runs, users" style="curved=1;startArrow=none;endArrow=block;exitX=0.01;exitY=1;entryX=0.89;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-6" target="9RnS6XpiojF8uRyiZI6o-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1175" y="305" />
+              <mxPoint x="1175" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-20" value="Lit/écrit DAGs, runs, tasks" style="curved=1;startArrow=none;endArrow=block;exitX=0.1;exitY=1;entryX=1;entryY=0.44;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-7" target="9RnS6XpiojF8uRyiZI6o-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2070" y="330" />
+              <mxPoint x="2010" y="380" />
+              <mxPoint x="1990" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-21" value="Dépend de" style="curved=1;startArrow=none;endArrow=block;entryX=0;entryY=0.3;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-6" target="9RnS6XpiojF8uRyiZI6o-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-22" value="Dépend de" style="curved=1;startArrow=none;endArrow=block;exitX=0.011;exitY=0.595;entryX=1;entryY=0.3;rounded=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-7" target="9RnS6XpiojF8uRyiZI6o-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1990" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-23" value="Stocke les données" style="curved=1;startArrow=none;endArrow=block;exitX=0.2;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-2" target="9RnS6XpiojF8uRyiZI6o-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1025" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-24" value="Stocke la config" style="curved=1;startArrow=none;endArrow=block;exitX=0.64;exitY=1.01;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-3" target="9RnS6XpiojF8uRyiZI6o-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="802" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-25" value="Stocke logs, DAGs, etc." style="curved=1;startArrow=none;endArrow=block;exitX=0.46;exitY=1;entryX=0;entryY=0.42;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-6" target="9RnS6XpiojF8uRyiZI6o-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="310" />
+              <mxPoint x="1377" y="432" />
+              <mxPoint x="1770" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-26" value="Stocke logs, DAGs, etc." style="curved=1;startArrow=none;endArrow=block;exitX=0.56;exitY=1;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-7" target="9RnS6XpiojF8uRyiZI6o-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2140" y="310" />
+              <mxPoint x="2110" y="360" />
+              <mxPoint x="2130" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-27" value="Stocke logs, DAGs, etc." style="curved=1;startArrow=none;endArrow=block;exitX=0.63;exitY=1.01;entryX=0;entryY=0.38;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-5" target="9RnS6XpiojF8uRyiZI6o-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1721" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-29" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=1;exitY=0.55;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-2" target="9RnS6XpiojF8uRyiZI6o-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="570" />
+              <mxPoint x="1240" y="590" />
+              <mxPoint x="1270" y="610" />
+              <mxPoint x="1360" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-30" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;entryX=0.5;entryY=1;rounded=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-4" target="9RnS6XpiojF8uRyiZI6o-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="340" />
+              <mxPoint x="1030" y="230" />
+            </Array>
+            <mxPoint x="980.9999999999995" y="280.0000000000001" as="sourcePoint" />
+            <mxPoint x="589.9999999999998" y="439.6399999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-31" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=1;exitY=0.75;entryX=0;entryY=0.36;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-6" target="9RnS6XpiojF8uRyiZI6o-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1530" y="120" />
+              <mxPoint x="1560" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-32" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.5;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-7" target="9RnS6XpiojF8uRyiZI6o-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2060" y="150" />
+              <mxPoint x="2070" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-33" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=0;rounded=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-5" target="9RnS6XpiojF8uRyiZI6o-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1740" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-34" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=0.64;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-8" target="9RnS6XpiojF8uRyiZI6o-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1025" y="794" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-35" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.03;entryY=0;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-9" target="9RnS6XpiojF8uRyiZI6o-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="802" y="794" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-36" value="" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=block;exitX=0.5;exitY=1.01;entryX=1;entryY=0.44;rounded=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-10" target="9RnS6XpiojF8uRyiZI6o-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2040" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9RnS6XpiojF8uRyiZI6o-39" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="9RnS6XpiojF8uRyiZI6o-11" target="9RnS6XpiojF8uRyiZI6o-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="500" as="sourcePoint" />
+            <mxPoint x="760" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

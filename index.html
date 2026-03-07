@@ -1,52 +1,237 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aristide Leparoux - Parcours</title>
+    <title>Aristide Leparoux - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Aristide LEPAROUX</h1>
-        <h2>Étudiant en Data à EURECOM</h2>
-    </header>
+    <div class="site-wrapper">
+        <!-- Sidebar/Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <div class="sidebar-header">
+                    <a href="#" class="sidebar-logo">AL</a>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#about" class="nav-link active" data-section="about">
+                        <i data-feather="user"></i>
+                        <span> À propos</span>
+                    </a>
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <i data-feather="code"></i>
+                        <span> Projets</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i data-feather="mail"></i>
+                        <span> Contact</span>
+                    </a>
+                </nav>
+                <div class="sidebar-footer">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aristide-leparoux/" target="_blank"
+                            aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                        <a href="https://github.com/aristide-git" target="_blank" aria-label="GitHub"><i
+                                data-feather="github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-    <main>
-        <section>
-            <h3>Mon parcours</h3>
-            <p>
-                Après deux années de classes préparatoires MP2I puis MPI, j’ai intégré l’école d’ingénieurs 
-                <strong>EURECOM</strong> pour me spécialiser dans le domaine de la data. 
-                Ce parcours m’a permis de développer de solides bases en mathématiques, en informatique 
-                et en traitement des données, ainsi qu’une bonne maîtrise des outils et méthodes liés 
-                à l’analyse et à l’exploitation de l’information.
-            </p>
-        </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Section À propos -->
+            <section id="about" class="content-section">
+                <div class="section-container">
+                    <div class="about-header">
+                        <h1>Aristide Leparoux</h1>
+                        <h2>Étudiant en Data Science — EURECOM</h2>
+                    </div>
 
-        <section>
-            <h3>Mon stage chez Mobilité Services</h3>
-            <p>
-                Dans le cadre de ma formation, j’ai effectué un stage chez 
-                <strong>Mobilité Services</strong>, où j’ai participé à la mise en place et à l’optimisation 
-                d’outils numériques destinés à améliorer la gestion des données internes. 
-                Ce stage m’a permis de mettre en pratique mes compétences techniques, 
-                de travailler en équipe sur des projets concrets et de découvrir les enjeux 
-                de la digitalisation dans le secteur des services.
-            </p>
-        </section>
+                    <div class="about-text">
+                        <p>
+                            Ce site a pour vocation de présenter en détail les projets techniques que j'ai réalisés.
+                            Vous y trouverez des approfondissements sur mes travaux en <strong>Data
+                                Engineering</strong>,
+                            <strong>Machine Learning</strong> et développement logiciel.
+                        </p>
+                        <p>
+                            Actuellement étudiant à <strong>EURECOM</strong> (Sophia Antipolis), je me spécialise en
+                            science des données.
+                            Mon parcours inclut une classe préparatoire MP2I/MPI* et diverses expériences pratiques,
+                            dont la mise en place d'un dashboard en temps réel et le développement d'IA de jeu.
+                        </p>
+                        <p>
+                            Je suis à la recherche d'un <strong>stage de 6 mois</strong> (juillet 2026 - janvier 2027)
+                            en Data Engineering, ML Engineering ou Data Science.
+                        </p>
+                    </div>
 
-        <section>
-            <h3>Mon CV</h3>
-            <p>
-                Vous pouvez télécharger mon CV ici :  
-                <a href="cv.pdf" target="_blank" class="btn">📄 Voir mon CV</a>
-            </p>
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2025 Aristide LEPAROUX</p>
-    </footer>
+                </div>
+            </section>
+
+
+            <!-- Section Projets -->
+            <section id="projects" class="content-section">
+                <div class="section-container">
+                    <h2 class="section-title-main">Projets Réalisés</h2>
+                    <div class="projects-grid">
+                        <a href="projects/dashboard-superset.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/Stage/logo.png" alt="Mobilité Services" class="project-image"
+                                    style="object-fit: contain; background: #fff; padding: 1rem;">
+                                <div class="project-card-content">
+                                    <h3>Dashboard Temps Réel — Stage (2 mois) Mobilité Services</h3>
+                                    <p>Création d'un dashboard en temps réel avec Apache Superset, orchestré par Airflow
+                                        et
+                                        alimenté par PostgreSQL pour le suivi des KPI du support IT.</p>
+                                    <div class="project-tags">
+                                        <span>Superset</span><span>Airflow</span><span>PostgreSQL</span><span>Docker</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
+                            </div>
+                        </a>
+                        <a href="projects/othello-ai.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/othelai/logo.jpeg" alt="OthelAI" class="project-image"
+                                    style="object-fit: contain; background: #fff; padding: 1rem;">
+                                <div class="project-card-content">
+                                    <h3>OthelAI — Jeu Othello avec IA</h3>
+                                    <p>Développement d'un jeu Othello multijoueur en ligne, backend Flask et IA en C
+                                        pour
+                                        l'adversaire.</p>
+                                    <div class="project-tags">
+                                        <span>JavaScript</span><span>Flask</span><span>C</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
+                            </div>
+                        </a>
+                        <a href="projects/canneberry.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/canneberry/canneberry-device.jpg" alt="CANNEBERRY"
+                                    class="project-image">
+                                <div class="project-card-content">
+                                    <h3>CANNEBERRY — Aide aux Malvoyants</h3>
+                                    <p>Système d'aide à la navigation pour personnes malvoyantes, détectant les
+                                        obstacles
+                                        sur un
+                                        chemin.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>Machine Learning</span><span>Électronique</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
+                            </div>
+                        </a>
+
+                        <!-- Projets en cours -->
+                        <div class="project-card" style="cursor: default;">
+                            <div
+                                style="height: 180px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                                <i data-feather="video"
+                                    style="color: var(--primary-color); width: 48px; height: 48px;"></i>
+                            </div>
+                            <div class="project-card-content">
+                                <h3>Deep Learning : Video Frame Interpolation</h3>
+                                <p><strong>Real-Time Intermediate Flow Estimation</strong><br>
+                                    Architecture de réseaux de neurones pour l'estimation de flux optique (PyTorch).
+                                    Optimisation de l'inférence temps réel et gestion de gros volumes de données.</p>
+                                <div class="project-tags">
+                                    <span>PyTorch</span><span>Deep Learning</span>
+                                </div>
+                            </div>
+                            <span class="project-card-cta"
+                                style="color: var(--fg-muted); background-color: var(--bg-light);">En cours
+                                (2026)</span>
+                        </div>
+
+                        <div class="project-card" style="cursor: default;">
+                            <div
+                                style="height: 180px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                                <i data-feather="pie-chart"
+                                    style="color: var(--primary-color); width: 48px; height: 48px;"></i>
+                            </div>
+                            <div class="project-card-content">
+                                <h3>Recherche : Portfolio Minimum-Variance</h3>
+                                <p><strong>Projet de recherche (100h) — Mathématiques & Finance</strong><br>
+                                    Optimisation sous contraintes de portefeuilles et réduction de la variance.
+                                    Modélisation mathématique et implémentation d'algorithmes.</p>
+                                <div class="project-tags">
+                                    <span>Python</span><span>Mathématiques</span><span>Finance</span>
+                                </div>
+                            </div>
+                            <span class="project-card-cta"
+                                style="color: var(--fg-muted); background-color: var(--bg-light);">En cours
+                                (2026)</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section id="contact" class="content-section">
+                <div class="section-container contact-container">
+                    <h2 class="section-title-main">Me Contacter</h2>
+                    <p class="section-intro">
+                        Une opportunité ? Écrivez-moi.
+                    </p>
+                    <div class="contact-actions">
+                        <div class="contact-info">
+                            <i data-feather="mail"></i>
+                            <a href="mailto:aristide.leparoux@eurecom.fr">aristide.leparoux@eurecom.fr</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Feather Icons
+        feather.replace();
+
+        // Active link switching
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.dataset.section === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

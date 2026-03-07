@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet — CANNEBERRY</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <a class="nav-tab active" href="../index.html#projects">← Retour</a>
+            </div>
+        </nav>
+        <main class="section-content" style="margin-top:24px">
+            <h1>CANNEBERRY — Aide aux Malvoyants</h1>
+            <p>Système d'aide à la navigation pour personnes malvoyantes, utilisant la détection d'obstacles pour
+                sécuriser les déplacements.</p>
+
+            <!-- Photo du dispositif -->
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/canneberry/canneberry-device.jpg" alt="Dispositif CANNEBERRY porté" />
+                    <p class="gallery-caption">Le dispositif CANNEBERRY porté sur le torse, équipé de capteurs et d'une
+                        caméra pour la détection d'obstacles.</p>
+                </div>
+            </div>
+
+            <!-- Affichage du poster PDF -->
+            <div class="pdf-viewer">
+                <h3>📄 Poster du projet</h3>
+                <embed src="../assets/images/canneberry/canneberry.pdf" type="application/pdf"
+                    style="border: 1px solid var(--border-color); border-radius: 8px;" />
+                <p style="margin-top: 1rem; text-align: center;">
+                    <a href="../assets/images/canneberry/canneberry.pdf" target="_blank"
+                        style="color: var(--primary-color);">
+                        Ouvrir le poster en pleine page →
+                    </a>
+                </p>
+            </div>
+
+            <h3>Technologies</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Électronique</span>
+                <span class="tech-tag">Raspberry Pi</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Capteurs ultrasoniques</span>
+            </div>
+
+            <h3>Objectifs</h3>
+            <ul>
+                <li>Détecter les obstacles sur le chemin de l'utilisateur</li>
+                <li>Fournir un feedback audio en temps réel</li>
+                <li>Créer un système portable et autonome</li>
+                <li>Améliorer l'autonomie des personnes malvoyantes</li>
+            </ul>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+                <li>Détection d'obstacles par vision par ordinateur</li>
+                <li>Capteurs ultrasoniques pour la mesure de distance</li>
+                <li>Alertes vocales et vibrations</li>
+                <li>Interface intuitive et accessible</li>
+            </ul>
+
+            <h3>Impact social</h3>
+            <ul>
+                <li>Amélioration de la mobilité et de l'indépendance</li>
+                <li>Réduction des risques d'accident</li>
+                <li>Solution abordable et personnalisable</li>
+            </ul>
+
+            <h3>💡 Retours d'expérience & Compétences acquises</h3>
+            <div class="about-text">
+                <p>
+                    <strong>🏆 Projet Lauréat :</strong> Ce projet a remporté le concours du "Meilleur Projet" de la
+                    promotion,
+                    récompensant l'innovation et la qualité de la réalisation technique.
+                </p>
+                <p>
+                    <strong>Contraintes Matérielles (Hardware) :</strong> J'ai dû composer avec les limites de la
+                    Raspberry Pi
+                    (puissance de calcul, surchauffe) et la qualité variable des caméras (gestion de la lumière et des
+                    couleurs)
+                    qui impactaient directement la fiabilité du code de vision par ordinateur.
+                </p>
+                <p>
+                    <strong>Design Produit :</strong> Au-delà du code, j'ai participé à la conception du boîtier en
+                    impression 3D.
+                    Il fallait intégrer l'électronique de manière compacte tout en restant ergonomique pour
+                    l'utilisateur malvoyant.
+                </p>
+                <p>
+                    <strong>Robustesse Embarquée :</strong> Contrairement à un serveur, un système embarqué peut
+                    s'éteindre brutalement.
+                    J'ai dû apprendre à gérer la corruption de carte SD et scripter des redémarrages automatiques pour
+                    garantir
+                    que l'appareil soit toujours opérationnel pour l'utilisateur.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
