@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
     <div class="site-wrapper">
         <!-- Sidebar/Navigation -->
@@ -21,10 +23,6 @@
                         <i data-feather="user"></i>
                         <span> À propos</span>
                     </a>
-                    <a href="#experiences" class="nav-link" data-section="experiences">
-                        <i data-feather="briefcase"></i>
-                        <span> Expériences</span>
-                    </a>
                     <a href="#projects" class="nav-link" data-section="projects">
                         <i data-feather="code"></i>
                         <span> Projets</span>
@@ -36,8 +34,10 @@
                 </nav>
                 <div class="sidebar-footer">
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/aristide-leparoux/" target="_blank" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-                        <a href="https://github.com/aristide-git" target="_blank" aria-label="GitHub"><i data-feather="github"></i></a>
+                        <a href="https://www.linkedin.com/in/aristide-leparoux/" target="_blank"
+                            aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                        <a href="https://github.com/aristide-git" target="_blank" aria-label="GitHub"><i
+                                data-feather="github"></i></a>
                     </div>
                 </div>
             </div>
@@ -49,167 +49,130 @@
             <section id="about" class="content-section">
                 <div class="section-container">
                     <div class="about-header">
-                        <div class="about-header-text">
-                            <h1 class="section-title">Aristide Leparoux</h1>
-                            <h2 class="section-subtitle">Étudiant Ingénieur en Science des Données</h2>
-                        </div>
-                        <img src="assets/images/leparoux-aristide_1.jpg" alt="Aristide Leparoux" class="profile-picture">
+                        <h1>Aristide Leparoux</h1>
+                        <h2>Étudiant en Data Science — EURECOM</h2>
                     </div>
-                    <div class="about-description">
-                        <p class="section-intro about-lede">
-                            Je suis un étudiant en data à EURECOM, une école internationale 100 % dispensée en anglais. Je souhaite m'orienter en tant que ML Engineer ou Data Engineer.
+
+                    <div class="about-text">
+                        <p>
+                            Ce site a pour vocation de présenter en détail les projets techniques que j'ai réalisés.
+                            Vous y trouverez des approfondissements sur mes travaux en <strong>Data
+                                Engineering</strong>,
+                            <strong>Machine Learning</strong> et développement logiciel.
                         </p>
-                        <p class="section-intro">
-                            Je suis à la recherche d'un stage dans ces domaines afin d'affiner mes compétences.
+                        <p>
+                            Actuellement étudiant à <strong>EURECOM</strong> (Sophia Antipolis), je me spécialise en
+                            science des données.
+                            Mon parcours inclut une classe préparatoire MP2I/MPI* et diverses expériences pratiques,
+                            dont la mise en place d'un dashboard en temps réel et le développement d'IA de jeu.
                         </p>
-                        <p class="section-intro">
-                            Ces dernières années j'ai mené plusieurs projets : une API RestDATA sur ma Raspberry, un dashboard temps réel pour Mobilité Services utilisant Superset, Airflow, PostgreSQL, ainsi que d'autres projets listés en bas de cette page. Ces expériences m'ont préparé à la réalité du métier en utilisant les outils de base (GitHub, SQL, Python, Airflow, Superset) et en adoptant les bonnes pratiques (clean code, pull requests, commentaires).
-                        </p>
-                        <p class="section-intro">
-                            Hormis l’aspect technique, je suis très enthousiaste et convivial, car la communication est indispensable en entreprise. 
-                        </p>
-                        <p class="section-intro">
-                            En dehors du travail, j'adore voyager (Costa Rica, Japon, Maroc…). Cela m'aide à m’organiser et j'adore cuisiner. Je suis aussi curieux de l’actualité, notamment géopolitique.
-                        </p>
-                        <p class="section-intro">
-                            Enfin, je suis ouvert et curieux face aux opportunités de travail ou à la découverte de nouvelles technologies, ce qui me permet d’évoluer.
+                        <p>
+                            Je suis à la recherche d'un <strong>stage de 6 mois</strong> (juillet 2026 - janvier 2027)
+                            en Data Engineering, ML Engineering ou Data Science.
                         </p>
                     </div>
-                    <div class="about-content">
-                        <div class="skills-container">
-                            <div class="skill-card">
-                                <div class="skill-card-header">
-                                    <i data-feather="hard-drive"></i>
-                                    <h4>Compétences Techniques</h4>
-                                </div>
-                                <div class="tags">
-                                    <span class="tag">Python</span>
-                                    <span class="tag">SQL</span>
-                                    <span class="tag">Scikit-learn</span>
-                                    <span class="tag">Pandas</span>
-                                    <span class="tag">Power BI</span>
-                                    <span class="tag">Tableau</span>
-                                    <span class="tag">Git</span>
-                                    <span class="tag">Docker</span>
-                                </div>
-                            </div>
-                            <div class="skill-card">
-                                <div class="skill-card-header">
-                                    <i data-feather="users"></i>
-                                    <h4>Qualités Humaines</h4>
-                                </div>
-                                <div class="tags">
-                                    <span class="tag">Résolution de problèmes</span>
-                                    <span class="tag">Travail d'équipe</span>
-                                    <span class="tag">Communication</span>
-                                    <span class="tag">Autonomie</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cv-download-wrapper">
-                            <a href="cv.pdf" class="cv-button" download>
-                                Télécharger mon CV
-                                <i data-feather="download-cloud"></i>
-                            </a>
-                        </div>
-                    </div>
+
+
                 </div>
             </section>
 
-            <!-- Section Expériences -->
-            <section id="experiences" class="content-section">
-                <div class="section-container">
-                    <h2 class="section-title-main">Parcours Professionnel</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <span class="timeline-date">2025 - 6 semaines</span>
-                                <h3>Stage chez Mobilité Services</h3>
-                                <p>Mise en place d'un dashboard Superset automatisé via Apache Airflow pour le suivi des indicateurs de performance.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <span class="timeline-date">2024 - Présent</span>
-                                <h3>EURECOM - Spécialisation Data</h3>
-                                <p>Formation d'ingénieur spécialisée en science des données, machine learning et big data.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <span class="timeline-date">2023 - 2024</span>
-                                <h3>Classes Préparatoires MP2I/MPI</h3>
-                                <p>Formation intensive en mathématiques, physique et informatique, préparant aux concours des grandes écoles d'ingénieurs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- Section Projets -->
             <section id="projects" class="content-section">
                 <div class="section-container">
                     <h2 class="section-title-main">Projets Réalisés</h2>
                     <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <i data-feather="folder"></i>
-                                <a href="projects/api-rest-data.html" class="project-link" aria-label="Voir le projet"><i data-feather="external-link"></i></a>
+                        <a href="projects/dashboard-superset.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/Stage/logo.png" alt="Mobilité Services" class="project-image"
+                                    style="object-fit: contain; background: #fff; padding: 1rem;">
+                                <div class="project-card-content">
+                                    <h3>Dashboard Temps Réel — Stage (2 mois) Mobilité Services</h3>
+                                    <p>Création d'un dashboard en temps réel avec Apache Superset, orchestré par Airflow
+                                        et
+                                        alimenté par PostgreSQL pour le suivi des KPI du support IT.</p>
+                                    <div class="project-tags">
+                                        <span>Superset</span><span>Airflow</span><span>PostgreSQL</span><span>Docker</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
                             </div>
-                            <img src="assets/images/test.jpg" alt="API RESTful" class="project-image">
-                            <h3>API RESTful pour la gestion de données</h3>
-                            <p>Déploiement d'une API RESTful sur Raspberry Pi pour exposer des données, avec documentation automatique et contrôles CRUD.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>FastAPI</span><span>Docker</span>
+                        </a>
+                        <a href="projects/othello-ai.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/othelai/logo.jpeg" alt="OthelAI" class="project-image"
+                                    style="object-fit: contain; background: #fff; padding: 1rem;">
+                                <div class="project-card-content">
+                                    <h3>OthelAI — Jeu Othello avec IA</h3>
+                                    <p>Développement d'un jeu Othello multijoueur en ligne, backend Flask et IA en C
+                                        pour
+                                        l'adversaire.</p>
+                                    <div class="project-tags">
+                                        <span>JavaScript</span><span>Flask</span><span>C</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
                             </div>
+                        </a>
+                        <a href="projects/canneberry.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/canneberry/canneberry-device.jpg" alt="CANNEBERRY"
+                                    class="project-image">
+                                <div class="project-card-content">
+                                    <h3>CANNEBERRY — Aide aux Malvoyants</h3>
+                                    <p>Système d'aide à la navigation pour personnes malvoyantes, détectant les
+                                        obstacles
+                                        sur un
+                                        chemin.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>Machine Learning</span><span>Électronique</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
+                            </div>
+                        </a>
+
+                        <!-- Projets en cours -->
+                        <div class="project-card" style="cursor: default;">
+                            <div
+                                style="height: 180px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                                <i data-feather="video"
+                                    style="color: var(--primary-color); width: 48px; height: 48px;"></i>
+                            </div>
+                            <div class="project-card-content">
+                                <h3>Deep Learning : Video Frame Interpolation</h3>
+                                <p><strong>Real-Time Intermediate Flow Estimation</strong><br>
+                                    Architecture de réseaux de neurones pour l'estimation de flux optique (PyTorch).
+                                    Optimisation de l'inférence temps réel et gestion de gros volumes de données.</p>
+                                <div class="project-tags">
+                                    <span>PyTorch</span><span>Deep Learning</span>
+                                </div>
+                            </div>
+                            <span class="project-card-cta"
+                                style="color: var(--fg-muted); background-color: var(--bg-light);">En cours
+                                (2026)</span>
                         </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <i data-feather="folder"></i>
-                                <a href="projects/dashboard-superset.html" class="project-link" aria-label="Voir le projet"><i data-feather="external-link"></i></a>
+
+                        <div class="project-card" style="cursor: default;">
+                            <div
+                                style="height: 180px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                                <i data-feather="pie-chart"
+                                    style="color: var(--primary-color); width: 48px; height: 48px;"></i>
                             </div>
-                            <img src="assets/images/test.jpg" alt="Dashboard Superset" class="project-image">
-                            <h3>Dashboard Temps Réel pour Mobilité Services</h3>
-                            <p>Création d'un dashboard en temps réel avec Apache Superset, orchestré par Airflow et alimenté par PostgreSQL.</p>
-                            <div class="project-tags">
-                                <span>Superset</span><span>Airflow</span><span>PostgreSQL</span>
+                            <div class="project-card-content">
+                                <h3>Recherche : Portfolio Minimum-Variance</h3>
+                                <p><strong>Projet de recherche (100h) — Mathématiques & Finance</strong><br>
+                                    Optimisation sous contraintes de portefeuilles et réduction de la variance.
+                                    Modélisation mathématique et implémentation d'algorithmes.</p>
+                                <div class="project-tags">
+                                    <span>Python</span><span>Mathématiques</span><span>Finance</span>
+                                </div>
                             </div>
+                            <span class="project-card-cta"
+                                style="color: var(--fg-muted); background-color: var(--bg-light);">En cours
+                                (2026)</span>
                         </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <i data-feather="folder"></i>
-                                <a href="projects/weather-forecasting.html" class="project-link" aria-label="Voir le projet"><i data-feather="external-link"></i></a>
-                            </div>
-                            <img src="assets/images/test.jpg" alt="Prévision Météo" class="project-image">
-                            <h3>Comparaison de Modèles de Prévision Météo</h3>
-                            <p>Étude comparative de plusieurs modèles de machine learning pour la prévision météo de Paris, en utilisant les données de data.gouv.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>Scikit-learn</span><span>Pandas</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <i data-feather="folder"></i>
-                                <a href="projects/othello-ai.html" class="project-link" aria-label="Voir le projet"><i data-feather="external-link"></i></a>
-                            </div>
-                            <h3>Jeu Othello avec IA</h3>
-                            <p>Développement d'un jeu Othello multijoueur en ligne, backend Flask et IA en C pour l’adversaire.</p>
-                            <div class="project-tags">
-                                <span>JavaScript</span><span>Flask</span><span>C</span>
-                            </div>
-                        </div>
-                        <div class="project-card">
-                            <div class="project-header">
-                                <i data-feather="folder"></i>
-                                <a href="projects/canneberry.html" class="project-link" aria-label="Voir le projet"><i data-feather="external-link"></i></a>
-                            </div>
-                            <img src="assets/images/test.jpg" alt="CANNEBERRY" class="project-image">
-                            <h3>CANNEBERRY - Aide aux Malvoyants</h3>
-                            <p>Système d'aide à la navigation pour personnes malvoyantes, détectant les obstacles sur un chemin.</p>
-                            <div class="project-tags">
-                                <span>Python</span><span>Machine Learning</span><span>Electronique</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -219,12 +182,12 @@
                 <div class="section-container contact-container">
                     <h2 class="section-title-main">Me Contacter</h2>
                     <p class="section-intro">
-                        Une question ou une opportunité ? N'hésitez pas à m'envoyer un message. Je serai ravi d'échanger avec vous.
+                        Une opportunité ? Écrivez-moi.
                     </p>
                     <div class="contact-actions">
                         <div class="contact-info">
                             <i data-feather="mail"></i>
-                            <a href="mailto:leparoux.job@protonmail.com">leparoux.job@protonmail.com</a>
+                            <a href="mailto:aristide.leparoux@eurecom.fr">aristide.leparoux@eurecom.fr</a>
                         </div>
                     </div>
                 </div>
@@ -257,7 +220,7 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
-            
+
             // Smooth scroll
             navLinks.forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -270,4 +233,5 @@
         });
     </script>
 </body>
+
 </html>

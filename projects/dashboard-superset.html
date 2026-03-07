@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projet — Dashboard Superset</title>
+    <title>Projet — Dashboard Mobilité Services</title>
     <link rel="stylesheet" href="../style.css" />
 </head>
+
 <body>
     <div class="container">
         <nav class="navbar">
@@ -14,9 +16,16 @@
             </div>
         </nav>
         <main class="section-content" style="margin-top:24px">
-            <h1>Dashboard Temps Réel pour Mobilité Services</h1>
-            <p>Création d'un dashboard en temps réel avec Apache Superset, orchestré par Airflow et alimenté par PostgreSQL pour le suivi des indicateurs de performance.</p>
-            
+            <!-- Hero avec logo -->
+            <div class="project-hero">
+                <img src="../assets/images/Stage/logo.png" alt="Logo Mobilité Services" class="project-logo">
+                <div>
+                    <h1>Dashboard Temps Réel — Stage (2 mois) Mobilité Services</h1>
+                    <p>Création d'un dashboard en temps réel avec Apache Superset, orchestré par Airflow et alimenté par
+                        PostgreSQL pour le suivi des indicateurs de performance du support IT.</p>
+                </div>
+            </div>
+
             <h3>Technologies</h3>
             <div class="project-tech">
                 <span class="tech-tag">Apache Superset</span>
@@ -25,8 +34,9 @@
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Docker</span>
                 <span class="tech-tag">Nginx</span>
+                <span class="tech-tag">MariaDB</span>
             </div>
-            
+
             <h3>Objectifs</h3>
             <ul>
                 <li>Automatiser les pipelines de données avec Airflow</li>
@@ -34,7 +44,7 @@
                 <li>Assurer la mise à jour en temps réel des données</li>
                 <li>Centraliser les KPI de Mobilité Services</li>
             </ul>
-            
+
             <h3>Architecture</h3>
             <ul>
                 <li>ETL automatisé avec Apache Airflow</li>
@@ -42,15 +52,136 @@
                 <li>Visualisation interactive avec Superset</li>
                 <li>Déploiement conteneurisé avec Docker</li>
             </ul>
-            
+
+            <!-- Galerie des Dashboards (Sélection : L'essentiel) -->
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                📊 Aperçu des Dashboards
+            </h2>
+
+            <div class="about-text"
+                style="margin-bottom: 2rem; padding: 1.2rem 1.5rem; background: #f8f9ff; border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0;">
+                <p style="margin: 0;">
+                    Les graphiques ont été construits à partir des rapports existants de <strong>Mobilité
+                        Services</strong>
+                    et des exports de leur outil de ticketing GestSup. J'ai aussi rajouté quelques visualisations
+                    en plus que je trouvais intéressantes et qui n'existaient pas encore, comme la
+                    <strong>heatmap d'activité</strong>, les <strong>incidents critiques par catégorie</strong>
+                    ou la <strong>répartition des demandeurs par agence</strong>.
+                </p>
+                <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #666;">
+                    🔒 Après en avoir discuté avec mon tuteur de stage, certaines données ne doivent pas être partagées
+                    publiquement, d'où le floutage.
+                </p>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/Stage/flouter/stat_all_time.png" alt="Dashboard Vue Globale All Time" />
+                    <p class="gallery-caption"><strong>Vue Globale — Pilotage All Time</strong><br>
+                        Tableau de bord complet pour la direction : volume total de tickets depuis le début,
+                        heatmap d'activité, répartition des types d'incidents/demandes,
+                        évolution temporelle et analyse des mots-clés les plus fréquents.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Stage/flouter/stat_annuel.png" alt="Dashboard Vue Annuelle" />
+                    <p class="gallery-caption"><strong>Suivi Annuel &amp; Comparatif N-1</strong><br>
+                        Analyse annuelle avec comparaison à l'année précédente, heatmap mensuelle,
+                        évolution des tickets, durée de résolution et répartition des demandeurs par agence.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Stage/flouter/stat_mensuel.png" alt="Dashboard Vue Mensuelle" />
+                    <p class="gallery-caption"><strong>Suivi Mensuel &amp; Drill-down</strong><br>
+                        Vue mensuelle détaillée avec comparaison mois par mois, état des tickets en cours,
+                        top des demandeurs, répartition des catégories et alertes sur les délais de résolution.</p>
+                </div>
+            </div>
+
+            <div class="pdf-viewer" style="text-align: center; border-style: dashed;">
+                <h3>🔒 Code source & Confidentialité</h3>
+                <p>
+                    Ce projet a été réalisé dans un contexte professionnel pour <strong>Mobilité Services</strong>.
+                    Le code source et les données brutes sont la propriété de l'entreprise et ne sont pas publics.
+                </p>
+                <p>
+                    Je peux néanmoins présenter l'architecture détaillée et des extraits de code anonymisés
+                    lors d'un entretien technique.
+                </p>
+            </div>
+
+            <h3>💡 Retours d'expérience & Compétences acquises</h3>
+            <div class="about-text">
+                <p>
+                    Ce stage de 2 mois a été une immersion complète dans le monde de l'entreprise.
+                    Au-delà de la technique, j'ai appris à gérer les <strong>attentes des parties prenantes</strong>,
+                    respecter des deadlines strictes et vulgariser mes travaux lors de présentations hebdomadaires.
+                </p>
+                <p><strong>Défis techniques majeurs :</strong></p>
+                <ul>
+                    <li>
+                        <strong>Nettoyage de Données :</strong> Les données sources contenaient de nombreuses balises
+                        HTML et du bruit.
+                        J'ai dû développer des scripts de parsing robustes et des filtres par mots-clés pour extraire
+                        l'information utile
+                        avant l'ingestion.
+                    </li>
+                    <li>
+                        <strong>Infrastructure :</strong> Configurer Superset derrière un reverse proxy Nginx sur un
+                        sous-domaine spécifique
+                        (et non à la racine) a été un casse-tête inattendu nécessitant plusieurs jours de debugging
+                        réseau et configuration.
+                    </li>
+                    <li>
+                        <strong>Connexions Distantes :</strong> Établir et sécuriser la connexion entre mon
+                        environnement Docker
+                        et le serveur de base de données de production distant.
+                    </li>
+                    <li>
+                        <strong>Robustesse :</strong> Concevoir le système pour qu'il soit résilient (redémarrage
+                        automatique des conteneurs
+                        après un crash, gestion des erreurs de connexion).
+                    </li>
+                </ul>
+                <p>
+                    <strong>Impact :</strong> Le projet est toujours en production et utilisé quotidiennement,
+                    plus de 8 mois après mon départ. Le DSI m'envoie encore occasionnellement des mises à jour sur son
+                    utilisation,
+                    ce qui témoigne de la pérennité de la solution mise en place.
+                </p>
+            </div>
+
+            <h3>🏗️ Architecture &amp; Schémas Techniques</h3>
+            <div class="project-gallery" style="margin-top: 2rem;">
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Stage/schéma/Docker_network.drawio.png"
+                        alt="Architecture Réseau Docker" />
+                    <p class="gallery-caption"><strong>Architecture Réseau &amp; Conteneurisation (Docker)</strong><br>
+                        Topologie du déploiement Docker. Met en évidence l'isolation des services (Superset, Redis,
+                        PostgreSQL)
+                        au sein de réseaux virtuels dédiés et l'exposition via Nginx acting comme reverse proxy.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="../assets/images/Stage/schéma/Activity_diagram.drawio.png"
+                        alt="Diagramme d'Activité ETL" />
+                    <p class="gallery-caption"><strong>Diagramme d'Activité (Pipeline ETL Airflow)</strong><br>
+                        Séquencement des tâches DAG sous Airflow : extraction périodique des données, scripts de
+                        transformation et de nettoyage en Python,
+                        gestion des dépendances et alertes en cas d'échec d'ingestion.</p>
+                </div>
+            </div>
+
             <h3>Résultats</h3>
             <ul>
-                <li>Réduction du temps de traitement de 40%</li>
-                <li>Amélioration de la qualité des données</li>
-                <li>Dashboards accessibles 24/7</li>
-                <li>Automatisation complète du processus</li>
+                <li>Solutions toujours en production après 8 mois.</li>
+                <li>Réduction du temps de reporting (automatisé vs manuel).</li>
+                <li>Autonomie complète des équipes sur l'accès aux chiffres.</li>
             </ul>
         </main>
     </div>
 </body>
+
 </html>
