@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet — APC : Assistant Personnel de Connaissances</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <a class="nav-tab active" href="../index.html#projects">← Retour</a>
+            </div>
+        </nav>
+        <main class="section-content" style="margin-top:24px">
+            <!-- Hero -->
+            <div class="project-hero">
+                <img src="../assets/images/rag/logo.png" alt="APC Logo" class="project-logo"
+                    style="width: 120px; height: 120px; object-fit: cover; border-radius: 12px;">
+                <div>
+                    <h1>APC — Assistant Personnel de Connaissances</h1>
+                    <p>Chatbot documentaire <strong>100% local</strong> pour étudiants. Vectorise vos cours (PDF, TXT,
+                        MD) et permet de les interroger, générer des exercices, des résumés et des flashcards grâce à un
+                        pipeline RAG (Retrieval-Augmented Generation).</p>
+                </div>
+            </div>
+
+            <h3>Technologies</h3>
+            <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">LlamaIndex</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">RAG</span>
+            </div>
+
+            <h3>Objectifs</h3>
+            <ul>
+                <li>Créer un assistant pédagogique qui fonctionne <strong>entièrement en local</strong> (aucune donnée
+                    envoyée sur le cloud)</li>
+                <li>Indexer et vectoriser automatiquement les cours au format PDF, TXT et Markdown</li>
+                <li>Proposer 4 modes d'interaction : chat Q&A, génération d'exercices, résumés et flashcards</li>
+                <li>Maintenir un contexte conversationnel grâce à la mémoire LangChain</li>
+            </ul>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                🏗️ Architecture du Pipeline RAG
+            </h2>
+
+            <div class="about-text"
+                style="margin-bottom: 2rem; padding: 1.2rem 1.5rem; background: #f8f9ff; border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0;">
+                <p style="margin: 0;">
+                    Le système repose sur deux frameworks complémentaires : <strong>LlamaIndex</strong> gère le pipeline
+                    RAG complet (ingestion, chunking, vectorisation, retrieval et génération) tandis que
+                    <strong>LangChain</strong> apporte la mémoire conversationnelle et la reformulation contextuelle des
+                    questions. Le tout est orchestré via une interface <strong>Streamlit</strong>.
+                </p>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/rag/architecture.png" alt="Architecture RAG" />
+                    <p class="gallery-caption"><strong>Pipeline RAG — Vue d'ensemble</strong><br>
+                        Les documents sont chargés, découpés en chunks de 1024 tokens (avec 200 tokens de
+                        chevauchement), puis vectorisés via Ollama (<code>nomic-embed-text</code>). À chaque question,
+                        LangChain reformule la requête en tenant compte de l'historique, LlamaIndex récupère les chunks
+                        les plus pertinents par similarité cosinus, puis le LLM (<code>Mistral</code>) génère une
+                        réponse sourcée.</p>
+                </div>
+            </div>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                💻 Interface Utilisateur
+            </h2>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="../assets/images/rag/interface.png" alt="Interface Streamlit APC" />
+                    <p class="gallery-caption"><strong>Interface Streamlit — Mode Chat</strong><br>
+                        L'interface propose une barre latérale de configuration (choix du modèle, nombre de chunks,
+                        gestion de l'index) et un sélecteur de mode (Chat, Exercices, Résumé, Flashcards). Les réponses
+                        incluent systématiquement les sources utilisées avec leur score de pertinence.</p>
+                </div>
+            </div>
+
+            <h3>🎯 Les 4 modes pédagogiques</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div
+                    style="padding: 1.5rem; background: #eff6ff; border-radius: 12px; border: 1px solid #bfdbfe; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                    <strong>Chat Q&A</strong>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Questions-réponses sur vos cours
+                        avec citation des sources</p>
+                </div>
+                <div
+                    style="padding: 1.5rem; background: #fef3c7; border-radius: 12px; border: 1px solid #fde68a; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📝</div>
+                    <strong>Exercices</strong>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Génération d'exercices variés
+                        avec corrections détaillées</p>
+                </div>
+                <div
+                    style="padding: 1.5rem; background: #d1fae5; border-radius: 12px; border: 1px solid #a7f3d0; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+                    <strong>Résumé</strong>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Résumé structuré d'un cours ou
+                        d'un chapitre complet</p>
+                </div>
+                <div
+                    style="padding: 1.5rem; background: #fce7f3; border-radius: 12px; border: 1px solid #fbcfe8; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🃏</div>
+                    <strong>Flashcards</strong>
+                    <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Cartes de révision recto/verso
+                        pour mémoriser efficacement</p>
+                </div>
+            </div>
+
+            <h3>🔧 Détails techniques</h3>
+            <div class="about-text">
+                <p>
+                    <strong>Ingestion des documents :</strong> Les fichiers (PDF, TXT, MD) sont chargés via le
+                    <code>SimpleDirectoryReader</code> de LlamaIndex avec scan récursif des sous-dossiers. Le découpage
+                    utilise un <code>SentenceSplitter</code> pour respecter les frontières de phrases.
+                </p>
+                <p>
+                    <strong>Vectorisation :</strong> Chaque chunk est vectorisé via le modèle
+                    <code>nomic-embed-text</code> d'Ollama. L'index est persisté sur disque pour éviter de
+                    re-vectoriser à chaque lancement.
+                </p>
+                <p>
+                    <strong>Mémoire conversationnelle :</strong> LangChain maintient l'historique des échanges via un
+                    <code>ChatMessageHistory</code>. Avant chaque requête, la question est reformulée en intégrant le
+                    contexte pour être autonome (important pour un retrieval pertinent).
+                </p>
+                <p>
+                    <strong>Configuration flexible :</strong> Tous les paramètres (modèle LLM, modèle d'embedding,
+                    chunk size, top-k) sont configurables via des variables d'environnement ou directement dans
+                    l'interface Streamlit.
+                </p>
+            </div>
+
+            <h3>📂 Structure du projet</h3>
+            <div
+                style="background: #1e293b; color: #e2e8f0; padding: 1.5rem 2rem; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8; overflow-x: auto;">
+                <pre style="margin: 0;">Longchai_illama/
+├── app.py                  # Point d'entrée Streamlit
+├── requirements.txt        # Dépendances Python
+├── src/
+│   ├── config.py           # Configuration centralisée
+│   ├── prompts.py          # Prompts système (chat, exercices, résumé, flashcards)
+│   ├── indexer.py          # Chargement, découpage et vectorisation
+│   └── chatbot.py          # Chatbot RAG avec mémoire et modes
+├── scripts/
+│   ├── test_ollama.py      # Diagnostic Ollama
+│   └── rebuild_index.py    # Reconstruction de l'index (CLI)
+├── mes_documents/          # Cours organisés par matière
+└── storage/                # Index vectoriel persisté</pre>
+            </div>
+
+            <h3 style="margin-top: 2rem;">💡 Retours d'expérience</h3>
+            <div class="about-text">
+                <p>
+                    Ce projet m'a permis d'approfondir ma compréhension des systèmes RAG et de l'articulation entre
+                    plusieurs frameworks (LlamaIndex pour le pipeline de données, LangChain pour la mémoire). Le choix
+                    du 100% local avec Ollama garantit la confidentialité totale des documents de cours.
+                </p>
+                <p><strong>Défis rencontrés :</strong></p>
+                <ul>
+                    <li><strong>Qualité du retrieval :</strong> Le réglage du chunk size et du top-k impacte fortement
+                        la pertinence des réponses. Trop petit = contexte insuffisant, trop grand = bruit.</li>
+                    <li><strong>Reformulation :</strong> Sans reformulation contextuelle, les questions de suivi
+                        ("Et pour le QoS ?") ne retrouvent pas les bons chunks. La couche LangChain résout ce problème.
+                    </li>
+                    <li><strong>Performance et Matériel :</strong> Faire tourner un LLM 100% en local est très exigeant. Ce projet a été testé avec une carte graphique <strong>GTX 1060</strong>, ce qui nécessitait parfois plusieurs minutes pour générer une réponse. Pour une expérience optimale en local, un PC plus puissant est nécessaire, ou l'utilisation de modèles plus légers (ex: <i>Llama 3.2</i>). Une alternative consiste à utiliser une API Cloud (comme <i>Gemini 2.5 Flash</i>) pour des réponses instantanées et de meilleure qualité, mais on perd alors l'avantage principal du projet : la confidentialité totale des données.</li>
+                </ul>
+            </div>
+
+            <div class="pdf-viewer" style="text-align: center; border-style: dashed; margin-top: 2rem;">
+                <h3>📦 Code source</h3>
+                <p>
+                    Le code complet de ce projet est disponible sur demande.
+                    N'hésitez pas à me contacter pour une démonstration en live.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projet — Video Frame Interpolation (RIFE)</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+        .video-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .video-compare-item {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .video-compare-item video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-compare-item .video-label {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .video-compare-item .video-label h4 {
+            margin: 0 0 0.25rem 0;
+            color: #111;
+        }
+
+        .video-compare-item .video-label p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .badge-original {
+            display: inline-block;
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-interpolated {
+            display: inline-block;
+            background: #d1fae5;
+            color: #059669;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .frame-sequence {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .frame-sequence img {
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            max-height: 200px;
+        }
+
+        .frame-sequence .frame-arrow {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .frame-sequence .frame-label {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .video-compare {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-tabs">
+                <a class="nav-tab active" href="../index.html#projects">← Retour</a>
+            </div>
+        </nav>
+        <main class="section-content" style="margin-top:24px">
+            <!-- Hero -->
+            <div class="project-hero" style="align-items: center;">
+                <div
+                    style="width: 120px; height: 120px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Deep Learning : Video Frame Interpolation</h1>
+                    <p>Implémentation du modèle <strong>RIFE</strong> (Real-Time Intermediate Flow Estimation) pour
+                        doubler le framerate de vidéos. Architecture de réseaux de neurones multi-échelle pour
+                        l'estimation de flux optique bidirectionnel et la synthèse de frames intermédiaires.</p>
+                </div>
+            </div>
+
+            <h3>Technologies</h3>
+            <div class="project-tech">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Deep Learning</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Optical Flow</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Kaggle</span>
+            </div>
+
+            <h3>Objectif</h3>
+            <ul>
+                <li>Implémenter une architecture RIFE (IFNet + FusionNet) pour l'interpolation vidéo</li>
+                <li>Doubler le framerate des vidéos : <strong>30 fps → 60 fps</strong></li>
+                <li>Entraîner le modèle sur un dataset de triplets de frames (Kaggle)</li>
+                <li>Comparer les résultats originaux et interpolés sur des vidéos de test</li>
+            </ul>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">30→60</div>
+                    <div class="stat-label">FPS (doublé)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">×2</div>
+                    <div class="stat-label">Nombre de frames</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Échelles (IFNet)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">RIFE</div>
+                    <div class="stat-label">Architecture</div>
+                </div>
+            </div>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                🎬 Comparaison Vidéo — Test 1
+            </h2>
+
+            <div class="about-text"
+                style="margin-bottom: 1.5rem; padding: 1.2rem 1.5rem; background: #f8f9ff; border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0;">
+                <p style="margin: 0;">
+                    Vidéo de test 1 (360×360). La vidéo originale à 30 fps est à gauche, la vidéo interpolée à 60 fps à
+                    droite.
+                    Observez la fluidité accrue des mouvements dans la version interpolée.
+                </p>
+                <div style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem;">
+                    <button onclick="syncPlay('test1')" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">▶ Lancer simultanément</button>
+                    <button onclick="syncPause('test1')" style="background: #e2e8f0; color: #1e293b; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">⏸ Pause</button>
+                    <button onclick="syncReset('test1')" style="background: #e2e8f0; color: #1e293b; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">⏮ Recommencer</button>
+                </div>
+            </div>
+
+            <div class="video-compare" id="video-group-test1">
+                <div class="video-compare-item">
+                    <video controls loop muted preload="metadata">
+                        <source src="../assets/images/vfi/test1_original.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">
+                        <span class="badge-original">Original</span>
+                        <h4>Test 1 — 30 fps</h4>
+                        <p>277 frames · 360×360 · 9.2s</p>
+                    </div>
+                </div>
+                <div class="video-compare-item">
+                    <video controls loop muted preload="metadata">
+                        <source src="../assets/images/vfi/test1_interpolated.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">
+                        <span class="badge-interpolated">Interpolé</span>
+                        <h4>Test 1 — 60 fps</h4>
+                        <p>553 frames · 360×360 · 9.2s</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                🎬 Comparaison Vidéo — Test 2
+            </h2>
+
+            <div class="about-text"
+                style="margin-bottom: 1.5rem; padding: 1.2rem 1.5rem; background: #f8f9ff; border-left: 4px solid var(--primary-color); border-radius: 0 8px 8px 0;">
+                <p style="margin: 0;">
+                    Vidéo de test 2 (640×360). Même principe : original à 30 fps vs interpolé à 60 fps.
+                    Les frames intermédiaires sont générées par le modèle, pas simplement dupliquées.
+                </p>
+                <div style="display: flex; gap: 0.75rem; align-items: center; margin-top: 1rem;">
+                    <button onclick="syncPlay('test2')" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">▶ Lancer simultanément</button>
+                    <button onclick="syncPause('test2')" style="background: #e2e8f0; color: #1e293b; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">⏸ Pause</button>
+                    <button onclick="syncReset('test2')" style="background: #e2e8f0; color: #1e293b; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">⏮ Recommencer</button>
+                </div>
+            </div>
+
+            <div class="video-compare" id="video-group-test2">
+                <div class="video-compare-item">
+                    <video controls loop muted preload="metadata">
+                        <source src="../assets/images/vfi/test2_original.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">
+                        <span class="badge-original">Original</span>
+                        <h4>Test 2 — 30 fps</h4>
+                        <p>360 frames · 640×360 · 12.0s</p>
+                    </div>
+                </div>
+                <div class="video-compare-item">
+                    <video controls loop muted preload="metadata">
+                        <source src="../assets/images/vfi/test2_interpolated.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-label">
+                        <span class="badge-interpolated">Interpolé</span>
+                        <h4>Test 2 — 60 fps</h4>
+                        <p>719 frames · 640×360 · 12.0s</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                🔬 Comment ça marche : Séquence d'interpolation
+            </h2>
+
+            <div class="about-text">
+                <p>
+                    Entre chaque paire de frames originales, le modèle génère une frame intermédiaire.
+                    Ci-dessous, une séquence extraite de la vidéo test 1 montrant : frame originale (n) → frame
+                    <strong>générée par le modèle</strong> → frame originale (n+1).
+                </p>
+            </div>
+
+            <div class="frame-sequence">
+                <div style="text-align: center;">
+                    <img src="../assets/images/vfi/test1_seq_1.png" alt="Frame originale N" />
+                    <div class="frame-label">Frame N (originale)</div>
+                </div>
+                <div class="frame-arrow">→</div>
+                <div style="text-align: center;">
+                    <img src="../assets/images/vfi/test1_seq_2.png" alt="Frame interpolée"
+                        style="border-color: #2563eb;" />
+                    <div class="frame-label" style="color: var(--primary-color); font-weight: 600;">Frame générée
+                        (modèle)</div>
+                </div>
+                <div class="frame-arrow">→</div>
+                <div style="text-align: center;">
+                    <img src="../assets/images/vfi/test1_seq_3.png" alt="Frame originale N+1" />
+                    <div class="frame-label">Frame N+1 (originale)</div>
+                </div>
+            </div>
+
+            <h2
+                style="margin-top: 3rem; margin-bottom: 2rem; color: #111; border-bottom: 2px solid var(--primary-color); padding-bottom: 0.5rem; display: inline-block;">
+                🏗️ Architecture du Modèle
+            </h2>
+
+            <div class="about-text">
+                <p>
+                    Le modèle est composé de deux réseaux de neurones travaillant en cascade :
+                </p>
+                <p>
+                    <strong>IFNet (Intermediate Flow Network) :</strong>
+                    Réseau multi-échelle (3 blocs) qui estime le flux optique bidirectionnel entre les deux frames
+                    d'entrée.
+                    Chaque bloc opère à une résolution différente (×4, ×2, ×1) et affine progressivement l'estimation du
+                    flux.
+                    Les frames sont warpées via le flux estimé, puis fusionnées avec un masque de pondération appris.
+                </p>
+                <p>
+                    <strong>FusionNet :</strong>
+                    Petit U-Net qui prend en entrée les frames originales, les frames warpées, le masque et le flux pour
+                    produire un résidu d'image. Ce résidu est ajouté au résultat de la fusion IFNet pour corriger les
+                    artefacts
+                    et produire la frame finale.
+                </p>
+            </div>
+
+            <div
+                style="background: #1e293b; color: #e2e8f0; padding: 1.5rem 2rem; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 0.82rem; line-height: 1.8; overflow-x: auto; margin: 2rem 0;">
+                <pre style="margin: 0;">RIFEModel
+├── IFNet (estimation de flux multi-échelle)
+│   ├── IFBlock₀ (scale=4) ─── Estimation grossière
+│   ├── IFBlock₁ (scale=2) ─── Raffinement
+│   └── IFBlock₂ (scale=1) ─── Raffinement final
+│       └── Sorties: flux (4ch), masque (1ch)
+│           → Warping des images → Fusion pondérée
+│
+└── FusionNet (raffinement U-Net)
+    ├── Encoder: 3 niveaux de downsampling
+    ├── Bottleneck
+    ├── Decoder: 3 niveaux + skip connections
+    └── Sortie: résidu RGB → merged + residual = frame finale</pre>
+            </div>
+
+            <h3>📂 Structure du projet</h3>
+            <div
+                style="background: #1e293b; color: #e2e8f0; padding: 1.5rem 2rem; border-radius: 10px; font-family: 'Courier New', monospace; font-size: 0.85rem; line-height: 1.8; overflow-x: auto;">
+                <pre style="margin: 0;">video_frame_interpolation/
+├── model/
+│   ├── rife_model.py          # IFNet + FusionNet + RIFEModel
+│   ├── warping.py             # Fonction de warping (grid_sample)
+│   └── checkpoints/
+│       └── best_model.pth     # Poids entraînés
+├── inference/
+│   └── video_interpolator.py  # Script d'inférence vidéo
+├── training_kaggle/
+│   └── train_rife_kaggle.ipynb  # Notebook d'entraînement (Kaggle GPU)
+├── training_local/
+│   └── train_rife.ipynb       # Notebook d'entraînement local
+└── data/
+    ├── test/                  # Vidéos de test (30 fps)
+    └── output/                # Vidéos interpolées (60 fps)</pre>
+            </div>
+
+            <h3 style="margin-top: 2rem;">💡 Retours d'expérience</h3>
+            <div class="about-text">
+                <p>
+                    Ce projet de deep learning m'a permis de comprendre en profondeur les architectures
+                    d'estimation de flux optique et les techniques de synthèse d'images. L'implémentation from-scratch
+                    du modèle RIFE a été particulièrement formatrice.
+                </p>
+                <p><strong>Défis rencontrés :</strong></p>
+                <ul>
+                    <li><strong>Entraînement :</strong> Le modèle nécessite un GPU puissant. L'entraînement a été
+                        réalisé sur Kaggle avec un GPU T4/P100 pour bénéficier de sessions gratuites.</li>
+                    <li><strong>Warping :</strong> L'implémentation correcte du backward warping avec
+                        <code>grid_sample</code> est subtile (normalisation des coordonnées, gestion des bords).</li>
+                    <li><strong>Multi-échelle :</strong> L'approche coarse-to-fine est essentielle : sans elle, le
+                        modèle n'arrive pas à estimer les grands déplacements.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function syncPlay(groupId) {
+            const group = document.getElementById('video-group-' + groupId);
+            const videos = group.querySelectorAll('video');
+            videos.forEach(v => v.play());
+        }
+        function syncPause(groupId) {
+            const group = document.getElementById('video-group-' + groupId);
+            const videos = group.querySelectorAll('video');
+            videos.forEach(v => v.pause());
+        }
+        function syncReset(groupId) {
+            const group = document.getElementById('video-group-' + groupId);
+            const videos = group.querySelectorAll('video');
+            videos.forEach(v => {
+                v.pause();
+                v.currentTime = 0;
+            });
+        }
+    </script>
+</body>
+
+</html>
