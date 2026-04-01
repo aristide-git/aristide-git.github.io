@@ -36,8 +36,6 @@
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/aristide-leparoux/" target="_blank"
                             aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-                        <a href="https://github.com/aristide-git" target="_blank" aria-label="GitHub"><i
-                                data-feather="github"></i></a>
                     </div>
                 </div>
             </div>
@@ -50,7 +48,7 @@
                 <div class="section-container">
                     <div class="about-header">
                         <h1>Aristide Leparoux</h1>
-                        <h2>Étudiant en Data Science — EURECOM</h2>
+                        <h2>Étudiant en Data Science à EURECOM</h2>
                     </div>
 
                     <div class="about-text">
@@ -68,7 +66,7 @@
                         </p>
                         <p>
                             Je suis à la recherche d'un <strong>stage de 6 mois</strong> (juillet 2026 - janvier 2027)
-                            en Data Engineering, ML Engineering ou Data Science.
+                            autour de la <strong>data</strong> engineering, machine learning ou science des données.
                         </p>
                     </div>
 
@@ -132,26 +130,44 @@
                             </div>
                         </a>
 
-                        <!-- Projets en cours -->
-                        <div class="project-card" style="cursor: default;">
-                            <div
-                                style="height: 180px; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
-                                <i data-feather="video"
-                                    style="color: var(--primary-color); width: 48px; height: 48px;"></i>
-                            </div>
-                            <div class="project-card-content">
-                                <h3>Deep Learning : Video Frame Interpolation</h3>
-                                <p><strong>Real-Time Intermediate Flow Estimation</strong><br>
-                                    Architecture de réseaux de neurones pour l'estimation de flux optique (PyTorch).
-                                    Optimisation de l'inférence temps réel et gestion de gros volumes de données.</p>
-                                <div class="project-tags">
-                                    <span>PyTorch</span><span>Deep Learning</span>
+                        <!-- Projet RAG -->
+                        <a href="projects/rag-apc.html" class="project-card-link">
+                            <div class="project-card">
+                                <img src="assets/images/rag/logo.png" alt="APC" class="project-image"
+                                    style="object-fit: cover;">
+                                <div class="project-card-content">
+                                    <h3>APC — Assistant Personnel de Connaissances (RAG)</h3>
+                                    <p>Chatbot documentaire 100% local pour étudiants. Pipeline RAG avec Ollama,
+                                        LlamaIndex et LangChain pour interroger ses cours, générer des exercices et des
+                                        flashcards.</p>
+                                    <div class="project-tags">
+                                        <span>Python</span><span>LlamaIndex</span><span>LangChain</span><span>RAG</span>
+                                    </div>
                                 </div>
+                                <span class="project-card-cta">Voir le projet →</span>
                             </div>
-                            <span class="project-card-cta"
-                                style="color: var(--fg-muted); background-color: var(--bg-light);">En cours
-                                (2026)</span>
-                        </div>
+                        </a>
+
+                        <!-- Projet Video Frame Interpolation -->
+                        <a href="projects/video-interpolation.html" class="project-card-link">
+                            <div class="project-card">
+                                <div
+                                    style="height: 180px; background: linear-gradient(135deg, #2563eb, #7c3aed); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                                    <i data-feather="video"
+                                        style="color: #ffffff; width: 48px; height: 48px;"></i>
+                                </div>
+                                <div class="project-card-content">
+                                    <h3>Deep Learning : Video Frame Interpolation</h3>
+                                    <p><strong>Real-Time Intermediate Flow Estimation (RIFE)</strong><br>
+                                        Architecture multi-échelle pour l'estimation de flux optique et interpolation
+                                        vidéo 30→60 fps.</p>
+                                    <div class="project-tags">
+                                        <span>PyTorch</span><span>Deep Learning</span><span>Computer Vision</span>
+                                    </div>
+                                </div>
+                                <span class="project-card-cta">Voir le projet →</span>
+                            </div>
+                        </a>
 
                         <div class="project-card" style="cursor: default;">
                             <div
